@@ -22,9 +22,7 @@ void agregarUnoIzquierda(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(j > 0){
-                    matriz[i][j - 1] = 1;
-                }
+                if(j > 0) matriz[i][j - 1] = 1;
             }
         }
     }
@@ -39,9 +37,7 @@ void agregarUnoDerecha(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(j < cols - 1 && j >= 0){
-                    matriz[i][j + 1] = 1;
-                }
+                if(j < cols - 1 && j >= 0) matriz[i][j + 1] = 1;
             }
         }
     }
@@ -56,9 +52,7 @@ void agregarUnoAbajo(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(i >= 0 && i < rows - 1 ){
-                    matriz[i + 1][j] = 1;
-                }
+                if(i >= 0 && i < rows - 1 ) matriz[i + 1][j] = 1;
             }
         }
     }
@@ -73,9 +67,7 @@ void agregarUnoArriba(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(i < rows && i > 0){
-                    matriz[i - 1][j] = 1;
-                }
+                if(i < rows && i > 0) matriz[i - 1][j] = 1;
             }
         }
     }
@@ -90,18 +82,10 @@ void agregarUno(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(i < rows && i > 0){
-                    matriz[i - 1][j] = 1;
-                }
-                if(i >= 0 && i < rows - 1 ){
-                    matriz[i + 1][j] = 1;
-                }
-                if(j < cols - 1 && j >= 0){
-                    matriz[i][j + 1] = 1;
-                }
-                if(j > 0){
-                    matriz[i][j - 1] = 1;
-                }
+                if(i < rows && i > 0) matriz[i - 1][j] = 1;
+                if(i >= 0 && i < rows - 1 ) matriz[i + 1][j] = 1;
+                if(j < cols - 1 && j >= 0) matriz[i][j + 1] = 1;
+                if(j > 0) matriz[i][j - 1] = 1;
             }
         }
     }
@@ -116,12 +100,8 @@ void agregarUnoIzquierda(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(j > 1){
-                    matriz[i][j - 1] = 1;
-                    matriz[i][j - 2] = 1;
-                }else if(j > 0){
-                    matriz[i][j - 1] = 1;
-                }
+                if(j > 1) matriz[i][j - 2] = 1;
+                if(j > 0) matriz[i][j - 1] = 1;
             }
         }
     }
@@ -135,12 +115,8 @@ void agregarUnoDerecha(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(j < cols - 2 && j >= 0){
-                    matriz[i][j + 1] = 1;
-                    matriz[i][j + 2] = 1;
-                }else if(j < cols - 1 && j >= 0){
-                    matriz[i][j + 1] = 1;
-                }
+                if(j < cols - 2 && j >= 0) matriz[i][j + 2] = 1;
+                if(j < cols - 1 && j >= 0) matriz[i][j + 1] = 1;
             }
         }
     }
@@ -154,12 +130,8 @@ void agregarUnoAbajo(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(i >= 0 && i < rows - 2 ){
-                    matriz[i + 1][j] = 1;
-                    matriz[i + 2][j] = 1;
-                }else if(i >= 0 && i < rows - 1){
-                    matriz[i + 1][j] = 1;
-                }
+                if(i >= 0 && i < rows - 2 ) matriz[i + 2][j] = 1;
+                if(i >= 0 && i < rows - 1) matriz[i + 1][j] = 1;
             }
         }
     }
@@ -173,12 +145,8 @@ void agregarUnoArriba(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(i < rows && i > 1){
-                    matriz[i - 1][j] = 1;
-                    matriz[i - 2][j] = 1;
-                }else if(i < rows && i > 0){
-                    matriz[i - 1][j] = 1;
-                }
+                if(i < rows && i > 1) matriz[i - 2][j] = 1;
+                if(i < rows && i > 0) matriz[i - 1][j] = 1;
             }
         }
     }
@@ -194,16 +162,9 @@ void agregarUnoIzquierda(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(j > 2){
-                    matriz[i][j - 1] = 1;
-                    matriz[i][j - 2] = 1;
-                    matriz[i][j - 3] = 1;
-                }else if(j > 1){
-                    matriz[i][j - 1] = 1;
-                    matriz[i][j - 2] = 1;
-                }else if(j > 0){
-                    matriz[i][j - 1] = 1;
-                }
+                if(j > 2) matriz[i][j - 3] = 1;
+                if(j > 1) matriz[i][j - 2] = 1;
+                if(j > 0) matriz[i][j - 1] = 1;
             }
         }
     }
@@ -218,16 +179,9 @@ void agregarUnoDerecha(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(j < cols - 3 && j >= 0){
-                    matriz[i][j + 1] = 1;
-                    matriz[i][j + 2] = 1;
-                    matriz[i][j + 3] = 1;
-                }else if(j < cols - 2 && j >= 0){
-                    matriz[i][j + 1] = 1;
-                    matriz[i][j + 2] = 1;
-                }else if(j < cols - 1 && j >= 0){
-                    matriz[i][j + 1] = 1;
-                }
+                if(j < cols - 3 && j >= 0) matriz[i][j + 3] = 1;
+                if(j < cols - 2 && j >= 0) matriz[i][j + 2] = 1;
+                if(j < cols - 1 && j >= 0) matriz[i][j + 1] = 1;
             }
         }
     }
@@ -241,17 +195,9 @@ void agregarUnoAbajo(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(i >= 0 && i < rows - 3 ){
-                    matriz[i + 1][j] = 1;
-                    matriz[i + 2][j] = 1;
-                    matriz[i + 3][j] = 1;
-                }
-                else if(i >= 0 && i < rows - 2 ){
-                    matriz[i + 1][j] = 1;
-                    matriz[i + 2][j] = 1;
-                }else if(i >= 0 && i < rows - 1){
-                    matriz[i + 1][j] = 1;
-                }
+                if(i >= 0 && i < rows - 3 ) matriz[i + 3][j] = 1;
+                if(i >= 0 && i < rows - 2 ) matriz[i + 2][j] = 1;
+                if(i >= 0 && i < rows - 1 ) matriz[i + 1][j] = 1;
             }
         }
     }
@@ -265,17 +211,9 @@ void agregarUnoArriba(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(i < rows && i > 2){
-                    matriz[i - 1][j] = 1;
-                    matriz[i - 2][j] = 1;
-                    matriz[i - 3][j] = 1;
-                }
-                else if(i < rows && i > 1){
-                    matriz[i - 1][j] = 1;
-                    matriz[i - 2][j] = 1;
-                }else if(i < rows && i > 0){
-                    matriz[i - 1][j] = 1;
-                }
+                if(i < rows && i > 2) matriz[i - 3][j] = 1;
+                if(i < rows && i > 1) matriz[i - 2][j] = 1;
+                if(i < rows && i > 0) matriz[i - 1][j] = 1;
             }
         }
     }
@@ -291,21 +229,10 @@ void agregarUnoIzquierda(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(j > 3){
-                    matriz[i][j - 1] = 1;
-                    matriz[i][j - 2] = 1;
-                    matriz[i][j - 3] = 1;
-                    matriz[i][j - 4] = 1;
-                }else if(j > 2){
-                    matriz[i][j - 1] = 1;
-                    matriz[i][j - 2] = 1;
-                    matriz[i][j - 3] = 1;
-                }else if(j > 1){
-                    matriz[i][j - 1] = 1;
-                    matriz[i][j - 2] = 1;
-                }else if(j > 0){
-                    matriz[i][j - 1] = 1;
-                }
+                if(j > 3) matriz[i][j - 4] = 1;
+                if(j > 2) matriz[i][j - 3] = 1;
+                if(j > 1) matriz[i][j - 2] = 1;
+                if(j > 0) matriz[i][j - 1] = 1;
             }
         }
     }
@@ -320,21 +247,10 @@ void agregarUnoDerecha(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(j < cols - 4 && j >= 0){
-                    matriz[i][j + 1] = 1;
-                    matriz[i][j + 2] = 1;
-                    matriz[i][j + 3] = 1;
-                    matriz[i][j + 4] = 1;
-                }else if(j < cols - 3 && j >= 0){
-                    matriz[i][j + 1] = 1;
-                    matriz[i][j + 2] = 1;
-                    matriz[i][j + 3] = 1;
-                }else if(j < cols - 2 && j >= 0){
-                    matriz[i][j + 1] = 1;
-                    matriz[i][j + 2] = 1;
-                }else if(j < cols - 1 && j >= 0){
-                    matriz[i][j + 1] = 1;
-                }
+                if(j < cols - 4 && j >= 0) matriz[i][j + 4] = 1;
+                if(j < cols - 3 && j >= 0) matriz[i][j + 3] = 1;
+                if(j < cols - 2 && j >= 0) matriz[i][j + 2] = 1;
+                if(j < cols - 1 && j >= 0) matriz[i][j + 1] = 1;
             }
         }
     }
@@ -348,21 +264,10 @@ void agregarUnoAbajo(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(i >= 0 && i < rows - 4 ){
-                    matriz[i + 1][j] = 1;
-                    matriz[i + 2][j] = 1;
-                    matriz[i + 3][j] = 1;
-                    matriz[i + 4][j] = 1;
-                }else if(i >= 0 && i < rows - 3 ){
-                    matriz[i + 1][j] = 1;
-                    matriz[i + 2][j] = 1;
-                    matriz[i + 3][j] = 1;
-                }else if(i >= 0 && i < rows - 2 ){
-                    matriz[i + 1][j] = 1;
-                    matriz[i + 2][j] = 1;
-                }else if(i >= 0 && i < rows - 1){
-                    matriz[i + 1][j] = 1;
-                }
+                if(i >= 0 && i < rows - 4 ) matriz[i + 4][j] = 1;
+                if(i >= 0 && i < rows - 3 ) matriz[i + 3][j] = 1;
+                if(i >= 0 && i < rows - 2 ) matriz[i + 2][j] = 1;
+                if(i >= 0 && i < rows - 1 ) matriz[i + 1][j] = 1;
             }
         }
     }
@@ -376,21 +281,10 @@ void agregarUnoArriba(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(i < rows && i > 3){
-                    matriz[i - 1][j] = 1;
-                    matriz[i - 2][j] = 1;
-                    matriz[i - 3][j] = 1;
-                    matriz[i - 4][j] = 1;
-                }else if(i < rows && i > 2){
-                    matriz[i - 1][j] = 1;
-                    matriz[i - 2][j] = 1;
-                    matriz[i - 3][j] = 1;
-                }else if(i < rows && i > 1){
-                    matriz[i - 1][j] = 1;
-                    matriz[i - 2][j] = 1;
-                }else if(i < rows && i > 0){
-                    matriz[i - 1][j] = 1;
-                }
+                if(i < rows && i > 3) matriz[i - 4][j] = 1;
+                if(i < rows && i > 2) matriz[i - 3][j] = 1;
+                if(i < rows && i > 1) matriz[i - 2][j] = 1;
+                if(i < rows && i > 0) matriz[i - 1][j] = 1;
             }
         }
     }
@@ -406,27 +300,11 @@ void agregarUnoIzquierda(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(j > 4){
-                    matriz[i][j - 1] = 1;
-                    matriz[i][j - 2] = 1;
-                    matriz[i][j - 3] = 1;
-                    matriz[i][j - 4] = 1;
-                    matriz[i][j - 5] = 1;
-                }else if(j > 3){
-                    matriz[i][j - 1] = 1;
-                    matriz[i][j - 2] = 1;
-                    matriz[i][j - 3] = 1;
-                    matriz[i][j - 4] = 1;
-                }else if(j > 2){
-                    matriz[i][j - 1] = 1;
-                    matriz[i][j - 2] = 1;
-                    matriz[i][j - 3] = 1;
-                }else if(j > 1){
-                    matriz[i][j - 1] = 1;
-                    matriz[i][j - 2] = 1;
-                }else if(j > 0){
-                    matriz[i][j - 1] = 1;
-                }
+                if(j > 4) matriz[i][j - 5] = 1;
+                if(j > 3) matriz[i][j - 4] = 1;
+                if(j > 2) matriz[i][j - 3] = 1;
+                if(j > 1) matriz[i][j - 2] = 1;
+                if(j > 0) matriz[i][j - 1] = 1;
             }
         }
     }
@@ -441,27 +319,11 @@ void agregarUnoDerecha(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(j < cols - 5 && j >= 0){
-                    matriz[i][j + 1] = 1;
-                    matriz[i][j + 2] = 1;
-                    matriz[i][j + 3] = 1;
-                    matriz[i][j + 4] = 1;
-                    matriz[i][j + 5] = 1;
-                }else if(j < cols - 4 && j >= 0){
-                    matriz[i][j + 1] = 1;
-                    matriz[i][j + 2] = 1;
-                    matriz[i][j + 3] = 1;
-                    matriz[i][j + 4] = 1;
-                }else if(j < cols - 3 && j >= 0){
-                    matriz[i][j + 1] = 1;
-                    matriz[i][j + 2] = 1;
-                    matriz[i][j + 3] = 1;
-                }else if(j < cols - 2 && j >= 0){
-                    matriz[i][j + 1] = 1;
-                    matriz[i][j + 2] = 1;
-                }else if(j < cols - 1 && j >= 0){
-                    matriz[i][j + 1] = 1;
-                }
+                if(j < cols - 5 && j >= 0) matriz[i][j + 5] = 1;
+                if(j < cols - 4 && j >= 0) matriz[i][j + 4] = 1;
+                if(j < cols - 3 && j >= 0) matriz[i][j + 3] = 1;
+                if(j < cols - 2 && j >= 0) matriz[i][j + 2] = 1;
+                if(j < cols - 1 && j >= 0) matriz[i][j + 1] = 1;
             }
         }
     }
@@ -475,27 +337,11 @@ void agregarUnoAbajo(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(i >= 0 && i < rows - 5 ){
-                    matriz[i + 1][j] = 1;
-                    matriz[i + 2][j] = 1;
-                    matriz[i + 3][j] = 1;
-                    matriz[i + 4][j] = 1;
-                    matriz[i + 5][j] = 1;
-                }else if(i >= 0 && i < rows - 4 ){
-                    matriz[i + 1][j] = 1;
-                    matriz[i + 2][j] = 1;
-                    matriz[i + 3][j] = 1;
-                    matriz[i + 4][j] = 1;
-                }else if(i >= 0 && i < rows - 3 ){
-                    matriz[i + 1][j] = 1;
-                    matriz[i + 2][j] = 1;
-                    matriz[i + 3][j] = 1;
-                }else if(i >= 0 && i < rows - 2 ){
-                    matriz[i + 1][j] = 1;
-                    matriz[i + 2][j] = 1;
-                }else if(i >= 0 && i < rows - 1){
-                    matriz[i + 1][j] = 1;
-                }
+                if(i >= 0 && i < rows - 5 ) matriz[i + 5][j] = 1;
+                if(i >= 0 && i < rows - 4 ) matriz[i + 4][j] = 1;
+                if(i >= 0 && i < rows - 3 ) matriz[i + 3][j] = 1;
+                if(i >= 0 && i < rows - 2 ) matriz[i + 2][j] = 1;
+                if(i >= 0 && i < rows - 1)  matriz[i + 1][j] = 1;
             }
         }
     }
@@ -509,27 +355,11 @@ void agregarUnoArriba(int **matriz, string posicion){
         for(int j = 0; j < cols; j++){
             if(i == currentRow && j == currentCol){
                 matriz[i][j] = 1;
-                if(i < rows && i > 4){
-                    matriz[i - 1][j] = 1;
-                    matriz[i - 2][j] = 1;
-                    matriz[i - 3][j] = 1;
-                    matriz[i - 4][j] = 1;
-                    matriz[i - 5][j] = 1;
-                }else if(i < rows && i > 3){
-                    matriz[i - 1][j] = 1;
-                    matriz[i - 2][j] = 1;
-                    matriz[i - 3][j] = 1;
-                    matriz[i - 4][j] = 1;
-                }else if(i < rows && i > 2){
-                    matriz[i - 1][j] = 1;
-                    matriz[i - 2][j] = 1;
-                    matriz[i - 3][j] = 1;
-                }else if(i < rows && i > 1){
-                    matriz[i - 1][j] = 1;
-                    matriz[i - 2][j] = 1;
-                }else if(i < rows && i > 0){
-                    matriz[i - 1][j] = 1;
-                }
+                if(i < rows && i > 4) matriz[i - 5][j] = 1;
+                if(i < rows && i > 3) matriz[i - 4][j] = 1;
+                if(i < rows && i > 2) matriz[i - 3][j] = 1;
+                if(i < rows && i > 1) matriz[i - 2][j] = 1;
+                if(i < rows && i > 0) matriz[i - 1][j] = 1;
             }
         }
     }
@@ -652,4 +482,3 @@ bool verificarUno(int **matriz, string posicion){
     }
     return false;
 }
-
