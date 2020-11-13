@@ -237,11 +237,9 @@ void readCSV(Node** list)
 	fstream fin; 
 
 	fin.open("data.csv", ios::in); 
-	
-	int rollnum, roll2, count = 0; 
 
 	vector<string> row; 
-	string line, word, temp; 
+	string line, word; 
 
 	while (!fin.eof()) { 
 		row.clear(); 
