@@ -6,7 +6,7 @@ using namespace std;
 struct Node 
 {  
 	int number;
-    string cadena; 
+  string cadena; 
 	Node* next; 
 	Node* prev; 
 }; 
