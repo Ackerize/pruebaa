@@ -30,8 +30,7 @@ int main(){
         matriz[i] = new int[cols];
     
     llenarCeros(matriz);
-    //agregarUno(matriz, "0,2");
-    //agregarUno(matriz,  "1,1", "top-2");
+    agregarUno(matriz, "0,2");
     imprimirArreglo(matriz);
     return 0;
 }
